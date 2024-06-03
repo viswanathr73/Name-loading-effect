@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Chaney;
+    src: url(/Fonts/chaney-ultraextended-webfont.ttf);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    
+}
+.loader{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(250,195,8);
+    animation:pulse 3s ;
+
+}
+
+.zoom{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotate(-7deg);
+    font-size: 13vw;
+    font-family: chaney;
+    -webkit-text-stroke-width:0.09vh;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke-color: #fff;
+    outline: none;
+    font-weight: 200;
+    
+}
+
+.loader h1{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    font-size:5vw;
+    font-family: chaney;
+    color: #fff;
+
+}
+
+.Loading{
+    position: relative;
+    left: 50%;
+    width: 50%;
+    bottom: -65%;
+    height: 10px;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    background-color: #fff;
+    border-radius:4px;
+    overflow:hidden;
+}
+
+.Loading::after{
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    height: 100%;
+    border-radius: 4px;
+    animation:load 3s ;
+}
+
+@keyframes load{
+    0%{
+        width: 0%;
+        background-color: #a28089;
+    }
+    25%{
+        width: 25%;
+        background-color: #a02ded;
+    }
+    50%{
+        width: 50%;
+        background-color: #d0bdf4;
+    }
+    75%{
+        width: 75%;
+        background-color: #d2d2d2;
+    }
+    100%{
+        width: 100%;
+        background-color: rgb(250,195,8);
+    }
+}
+
+@keyframes pulse{
+    0%{
+    
+        background-color: #a28089;
+    }
+    25%{
+    
+        background-color: #a02ded;
+    }
+    50%{
+       
+        background-color: #5490df;
+    }
+    75%{
+       
+        background-color: #e27a03;
+    }
+    100%{
+       
+        background-color: rgb(250,195,8);
+    }
+}
